@@ -1,5 +1,5 @@
 import React from "react";
-import LineChart from "./line-chart";
+import LineChart from "../../components/line-chart";
 
 const BarChart = () => {
   return <h2>Bar Chart</h2>;
