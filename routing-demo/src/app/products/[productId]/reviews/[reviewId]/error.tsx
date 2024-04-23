@@ -9,7 +9,7 @@ const ErrorBoundary = ({
 }) => {
   return (
     <div>
-      <span>Error in reviewId: {error.message}</span>
+      <span>{error.message}</span>
       <button onClick={() => reset()}>Try again</button>
     </div>
   );
