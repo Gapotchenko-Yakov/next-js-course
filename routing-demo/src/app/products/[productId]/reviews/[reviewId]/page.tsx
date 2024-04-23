@@ -2,11 +2,21 @@ import NotFound from "@/app/not-found";
 import { notFound } from "next/navigation";
 import React from "react";
 
+const getRandomInt = (count: number) => {
+  return Math.floor(Math.random() * count);
+};
+
 const Review = ({
   params,
 }: {
   params: { reviewId: string; productId: string };
 }) => {
+  const random = getRandomInt(2);
+
+  if (random === 0) {
+    throw new Error("Error loading review.");
+  }
+
   if (parseInt(params.reviewId) > 1000) {
     notFound();
   }
