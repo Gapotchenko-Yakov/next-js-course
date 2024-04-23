@@ -1,11 +1,16 @@
 "use client";
 
-import React from "react";
-
-const ErrorBoundary = ({ error }: { error: Error }) => {
+const ErrorBoundary = ({
+  error,
+  reset,
+}: {
+  error: Error;
+  reset: () => void;
+}) => {
   return (
-    <div className="text-red-800 bg-purple-400">
-      Error in reviewId: {error.message}
+    <div>
+      <span>Error in reviewId: {error.message}</span>
+      <button onClick={() => reset()}>Try again</button>
     </div>
   );
 };
