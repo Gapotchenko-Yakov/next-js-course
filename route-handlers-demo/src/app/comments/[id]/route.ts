@@ -18,3 +18,14 @@ export const PATCH = async (
   comments[index].text = text;
   return Response.json(comments[index]);
 };
+
+export const DELETE = (
+  request: Request,
+  { params }: { params: { id: string } }
+) => {
+  const index = comments.findIndex((item) => item.id === parseInt(params.id));
+  const deletedComment = comments[index];
+  comments.splice(index, 1);
+
+  return Response.json(deletedComment);
+};
