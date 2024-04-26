@@ -33,7 +33,7 @@ export default function RootLayout({
             padding: "1rem",
           }}
         >
-          <p>Header</p>
+          <p>Footer</p>
         </footer>
       </body>
     </html>
