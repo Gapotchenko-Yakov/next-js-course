@@ -13,7 +13,7 @@ export const GET = async (request: NextRequest) => {
 export const POST = async (request: Request) => {
   const comment = await request.json();
   const newComment = {
-    id: comments.length,
+    id: comments.length + 1,
     text: comment.text,
   };
   comments.push(newComment);
