@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
-import Product from "../components/product";
-import Reviews from "../components/reviews";
+import Product from "../../components/product";
+import Reviews from "../../components/reviews";
 
 const ProductDetailPage = () => {
   return (
